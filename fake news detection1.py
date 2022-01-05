@@ -68,14 +68,11 @@ print(f'Accuracy: {round(score*100,2)}%')
 
 confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
 
-
-# In[ ]:
-
-
-
+# here we get the accurecy of 92.82% and confusion matrix as [[589, 49
+#                                                              42, 587]] and datatype as int64]
+# so with this model we conclude that 589 as true positive and 587 as false negative and 42 as false positive and 49 as false negative.
 
 
-# In[ ]:
 
 
 
