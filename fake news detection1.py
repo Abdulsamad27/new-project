@@ -21,6 +21,22 @@ variable = pd.read_csv(r"Documents\news.csv")
 # get the shape and haed(top 5 tows and columns )
 variable.shape
 variable.head()
+print(variable)
+
+#training set
+train_df= pd.read_csv(r"Documents\news.csv")
+#test set
+test_df = pd.read_csv(r"Documents\news.csv")
+
+#some sample 
+sample_submission = pd.read_csv(r"Documents\news.csv")
+#
+sample_submission.head()
+
+#describe the dataset
+train_df.describe()
+
+train_df.info(verbose = True)
 
 
 # In[4]:
@@ -65,15 +81,15 @@ print(f'Accuracy: {round(score*100,2)}%')
 
 # In[8]:
 
-
-confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
-
 # here we get the accurecy of 92.82% and confusion matrix as [[589, 49
 #                                                              42, 587]] and datatype as int64]
 # so with this model we conclude that 589 as true positive and 587 as false negative and 42 as false positive and 49 as false negative.
 
+confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
 
 
+#plot
+sns.countplot(x = train_df.columns.values)
 
 
 
