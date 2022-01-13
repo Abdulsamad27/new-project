@@ -91,5 +91,32 @@ confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
 #plot
 sns.countplot(x = train_df.columns.values)
 
+#
+test_df.describe()
+
+#
+def plot_feature_distribution(df1, df2, label1, label2, features): 
+    i = 0 
+    sns.set_style('whitegrid') 
+    ax = plt.subplots(10,10,figsize=(18,22)),
+    plt.figure()
+    
+#
+def features():
+    return np.randomrandint(3000,4888)
+  
+#
+for featuresin features:
+    i += 1
+    plt.subplot(10,10,i)
+    sns.displot(df1[feature], label=label1)
+    sns.displot(df2[feature], label=label2)
+    plt.xlabel(feature, fontsize=9)
+    locs, labels = plt.xticks()
+    plt.tick_params(axis='x', which='major', labelsize=6, pad=-6)
+    plt.tick_params(axis='y', which='major', labelsize=6)
+plt.show();
+  
+    
 
 
